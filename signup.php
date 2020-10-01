@@ -15,7 +15,7 @@ if (isset($_REQUEST["isignup"])) {
         if ($email == '' || $password == '' || $mobile == '') {
             echo mysqli_error($conn);
         } else {
-            $query = "INSERT INTO `signup` VALUES(NULL,'$email','$password','$mobile')";
+            $query = "INSERT INTO `signup` VALUES('$email','$password','$mobile')";
             $result = mysqli_query($conn, $query);
             if ($result) {
                 header("location:index.php");
